@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BancoPolimorfismo.iml" filepath="$PROJECT_DIR$/BancoPolimorfismo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/polimorfismoBanco.iml" filepath="$PROJECT_DIR$/polimorfismoBanco.iml" />
     </modules>
   </component>
 </project>

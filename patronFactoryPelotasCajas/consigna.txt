@@ -1,0 +1,15 @@
+
+Si recibimos como parámetro “CAJA10X10” deberás poder construir un objeto de la clase
+Caja que tenga una longitud, ancho y altura de 10 cm. Si el parámetro es “PELOTAFULTBOL”
+deberás poder construir un objeto de la clase pelota cuyo radio sea de
+11 cm, tamaño del radio de una pelota de fútbol. Si se recibe como parámetro
+“PELOTATENIS” deberás construir un objeto pelota con un radio de 0,32 cm.
+
+Con base en el enunciado:
+c) Realizar la programación del método calcularEspacio que devuelva (no muestre por
+consola) la cantidad de espacio necesario que necesita cada producto, es decir, el volumen
+que ocupa.
+d) Realizar la programación del método calcularEspacioNecesario que devuelva la
+cantidad de espacio necesario para guardar todos los productos del almacén.
+
+Consideraciones: contemplar todas las medidas en cm.
