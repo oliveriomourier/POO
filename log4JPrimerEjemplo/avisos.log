@@ -1,0 +1,17 @@
+[2022-01-06 15:48:45] [ ERROR] [Leon:17] La edad no puede ser negativa
+[2022-01-06 15:48:45] [ ERROR] [Main:12] Ocurrio un error
+[2022-01-06 15:49:29] [ INFO ] [Leon:23] El leon Simba está corriendo
+[2022-01-06 15:49:29] [ INFO ] [Leon:28] El leon Simba tiene 11 años y es alfa
+[2022-01-06 15:49:29] [ INFO ] [Leon:30] El leon Simba tiene menos de 10 años
+[2022-01-06 15:50:04] [ INFO ] [Leon:23] El leon Simba está corriendo
+[2022-01-06 15:50:04] [ INFO ] [Leon:28] El leon Simba tiene 11 años y es alfa
+[2022-01-06 15:51:02] [ INFO ] [Leon:23] El leon Simba está corriendo
+[2022-01-06 15:51:02] [ INFO ] [Leon:28] El leon Simba tiene 11 años y es alfa
+[2022-01-06 15:51:02] [ INFO ] [Leon:21] El leon Rey está corriendo
+[2022-01-06 15:51:02] [ INFO ] [Leon:28] El Tigre Rey tiene menos de 10 años
+[2022-01-06 15:51:43] [ INFO ] [Leon:23] El leon Simba está corriendo
+[2022-01-06 15:51:43] [ INFO ] [Leon:28] El leon Simba tiene 11 años y es alfa
+[2022-01-06 15:51:43] [ INFO ] [Leon:21] El leon Rey está corriendo
+[2022-01-06 15:51:43] [ INFO ] [Leon:28] El Tigre Rey tiene menos de 10 años
+[2022-01-06 15:51:43] [ ERROR] [Leon:17] La edad no puede ser negativa
+[2022-01-06 15:51:43] [ ERROR] [Main:20] Ocurrio un error
