@@ -28,11 +28,15 @@ public class Subasta implements Observable {
     @Override
     public void notificar() {
         for (Observador Oferente : listaOferentes) {
-            Oferente.actualizar(precio);
+            Oferente.actualizar(this);
         }
     }
 
     public List<Observador> getListaOferentes() {
         return listaOferentes;
+    }
+
+    public Double getPrecio() {
+        return precio;
     }
 }

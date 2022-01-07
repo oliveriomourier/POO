@@ -14,8 +14,8 @@ public class Oferente implements Observador{
     }
 
     @Override
-    public void actualizar(Double precioSubasta) {
-        if(precioSubasta < montoTope){
+    public void actualizar(Subasta subasta) {
+        if(subasta.getPrecio() < montoTope){
             System.out.println(nombre + " " + apellido + " oferta: " + montoTope);
         }
     }
