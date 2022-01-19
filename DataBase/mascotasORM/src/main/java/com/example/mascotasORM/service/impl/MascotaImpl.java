@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class MascotaImpl implements IMascotaService {
@@ -45,5 +46,10 @@ public class MascotaImpl implements IMascotaService {
     @Override
     public List<Mascota> listarTodo(){
         return mascotaRepository.findAll();
+    }
+
+    @Override
+    public Set<Mascota> filterByPrecio(Integer precioMinimo, Integer precioMaximo) {
+        return mascotaRepository.filterByPrecio(precioMinimo, precioMaximo);
     }
 }

@@ -1,17 +1,19 @@
 package com.example.mascotasORM.controller;
 
 import com.example.mascotasORM.entity.Mascota;
+import com.example.mascotasORM.service.IMascotaService;
 import com.example.mascotasORM.service.impl.MascotaImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @RestController
 public class MascotaController {
     @Autowired
-    MascotaImpl mascotaService;
+    IMascotaService mascotaService;
 
     @PostMapping("/")
     public Mascota guardar(@RequestBody Mascota mascota){
@@ -37,4 +39,9 @@ public class MascotaController {
     public String modificar(@RequestBody Mascota mascota){
         return mascotaService.modificar(mascota);
     }
+
+    @GetMapping()
+    public Set<Mascota> filterByPrecio(@RequestParam Integer precioMinimo, Integer precioMaximo){
+        return mascotaService.filterByPrecio(precioMinimo, precioMaximo);
+    };
 }

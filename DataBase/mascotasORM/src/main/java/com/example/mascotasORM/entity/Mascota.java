@@ -17,4 +17,5 @@ public class Mascota {
     private int id;
     private String nombre;
     private int edad;
+    private int precio;
 }
