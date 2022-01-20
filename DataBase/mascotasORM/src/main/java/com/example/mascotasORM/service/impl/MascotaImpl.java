@@ -52,4 +52,12 @@ public class MascotaImpl implements IMascotaService {
     public Set<Mascota> filterByPrecio(Integer precioMinimo, Integer precioMaximo) {
         return mascotaRepository.filterByPrecio(precioMinimo, precioMaximo);
     }
+
+    public Set<Mascota> filterByPrecioMaximo(Integer precioMaximo) {
+        return mascotaRepository.filterByPrecioMaximo(precioMaximo);
+    }
+
+    public Set<Mascota> filterByPrecioMinimo(Integer precioMinimo) {
+        return mascotaRepository.filterByPrecioMinimo(precioMinimo);
+    }
 }

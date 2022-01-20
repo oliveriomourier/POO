@@ -12,4 +12,10 @@ import java.util.Set;
 public interface IMascotaRepository extends JpaRepository<Mascota, Integer> {
     @Query("FROM Mascota m WHERE m.precio BETWEEN :precioMinimo AND :precioMaximo")
     Set<Mascota> filterByPrecio(Integer precioMinimo, Integer precioMaximo);
+
+    @Query("FROM Mascota m WHERE m.precio < :precioMaximo")
+    Set<Mascota> filterByPrecioMaximo(Integer precioMaximo);
+
+    @Query("FROM Mascota m WHERE m.precio > :precioMaximo")
+    Set<Mascota> filterByPrecioMinimo(Integer precioMaximo);
 }

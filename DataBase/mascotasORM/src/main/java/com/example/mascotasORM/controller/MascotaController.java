@@ -40,8 +40,16 @@ public class MascotaController {
         return mascotaService.modificar(mascota);
     }
 
-    @GetMapping()
-    public Set<Mascota> filterByPrecio(@RequestParam Integer precioMinimo, Integer precioMaximo){
+    @GetMapping("/precio")
+    public Set<Mascota> filterByPrecio(@RequestParam (required = false)Integer precioMaximo, Integer precioMinimo){
+        System.out.println(precioMinimo);
+        System.out.println(precioMaximo);
+        if(precioMinimo == null && precioMaximo>=0){
+            return mascotaService.filterByPrecioMaximo(precioMaximo);
+        }
+        if(precioMaximo == null && precioMinimo>=0){
+            return mascotaService.filterByPrecioMinimo(precioMinimo);
+        }
         return mascotaService.filterByPrecio(precioMinimo, precioMaximo);
     };
 }

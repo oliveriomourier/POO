@@ -13,4 +13,6 @@ public interface IMascotaService {
     public Optional<Mascota> buscar(Integer id);
     public List<Mascota> listarTodo();
     Set<Mascota> filterByPrecio(Integer precioMinimo, Integer precioMaximo);
+    Set<Mascota> filterByPrecioMaximo(Integer precioMaximo);
+    Set<Mascota> filterByPrecioMinimo(Integer precioMinimo);
 }
