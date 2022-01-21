@@ -4,8 +4,11 @@ import com.example.mascotasORM.entity.Mascota;
 import com.example.mascotasORM.service.IMascotaService;
 import com.example.mascotasORM.service.impl.MascotaImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -41,15 +44,24 @@ public class MascotaController {
     }
 
     @GetMapping("/precio")
-    public Set<Mascota> filterByPrecio(@RequestParam (required = false)Integer precioMaximo, Integer precioMinimo){
-        System.out.println(precioMinimo);
-        System.out.println(precioMaximo);
-        if(precioMinimo == null && precioMaximo>=0){
-            return mascotaService.filterByPrecioMaximo(precioMaximo);
+    public ResponseEntity<?> filterByPrecio(@RequestParam (required = false) Integer precioMaximo, Integer precioMinimo){
+        Set<Mascota> mascotas = null;
+
+        if(precioMaximo == null){
+            mascotas = mascotaService.filterByPrecioMinimo(precioMinimo);
         }
-        if(precioMaximo == null && precioMinimo>=0){
-            return mascotaService.filterByPrecioMinimo(precioMinimo);
+        else if(precioMinimo == null){
+            mascotas = mascotaService.filterByPrecioMaximo(precioMaximo);
         }
-        return mascotaService.filterByPrecio(precioMinimo, precioMaximo);
+        else{
+            mascotas = mascotaService.filterByPrecio(precioMinimo, precioMaximo);
+        }
+
+        if(mascotas.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return ResponseEntity.ok(mascotas);
+
     };
 }
