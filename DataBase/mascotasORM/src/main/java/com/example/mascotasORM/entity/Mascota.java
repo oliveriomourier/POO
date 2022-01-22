@@ -12,10 +12,17 @@ import javax.persistence.*;
 @Entity
 @Table(name="mascotas")
 public class Mascota {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nombre;
     private int edad;
     private int precio;
+
+    public Mascota(String nombre, int edad, int precio) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.precio = precio;
+    }
 }
